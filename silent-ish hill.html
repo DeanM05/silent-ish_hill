@@ -33,7 +33,9 @@ tw-sidebar tw-icon.undo
 {
 	display: none;
 }
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 </script><tw-passagedata pid="1" name="Start" tags="Act-1" position="0,0">My name is Henry Lloyd, and I&#x27;m turning thirty today.
@@ -92,31 +94,43 @@ Standing out in the hallway, you hear a noise behind the closest corner.
 
 [[Leave the hospital.]]</tw-passagedata><tw-passagedata pid="20" name="Leave the hospital." tags="" position="600,600">You leave the hospital and walk out into the town. Looking around, there still doesn&#x27;t seem to be anyone in sight.
 
-Lily tugs on your arm and once again urges you to follow her, pointing eagerly towards the nearby convenience store.
-(set: $lilyschoice to &quot;Convenience Store&quot;)
-(set: $storysection to 1)
+Lily tugs on your arm and once again urges you to follow her, pointing eagerly towards the nearby convenience store.(set: $lilyschoice to &quot;Convenience Store&quot;)(set: $storysection to 1)
 
 [[Decide where to go.]]</tw-passagedata><tw-passagedata pid="21" name="Decide where to go." tags="" position="750,600">
 [[Go to the Hospital.]]
 [[Go to the Convenience Store.]]
 [[Go to the Police Station.]]
-[[Go to the Pharmacy.]]</tw-passagedata><tw-passagedata pid="22" name="Go to the Hospital." tags="" position="527,750">(if: $lilyschoice is &quot;Hospital&quot;)[(set: $insanity to $insanity+1)]
-(set: $lilyschoice to &quot;None&quot;)
-You go to the Hospital.
+[[Go to the Town Hall.]]</tw-passagedata><tw-passagedata pid="22" name="Go to the Hospital." tags="" position="527,750">(if: $lilyschoice is &quot;Hospital&quot;)[(set: $insanity to $insanity+1)](set: $lilyschoice to &quot;None&quot;)You go to the Hospital.
 
-(if: $storysection is 1)[[[Continue-&gt;Hospital(Section 1)]]]</tw-passagedata><tw-passagedata pid="23" name="Go to the Convenience Store." tags="" position="675,749">(if: $lilyschoice is &quot;Convenience Store&quot;)[(set: $insanity to $insanity+1)]
-(set: $lilyschoice to &quot;None&quot;)
-You go to the Convenience Store.
+(if: $storysection is 1)[[[Continue-&gt;Hospital(Section 1)]]]</tw-passagedata><tw-passagedata pid="23" name="Go to the Convenience Store." tags="" position="675,749">(if: $lilyschoice is &quot;Convenience Store&quot;)[(set: $insanity to $insanity+1)](set: $lilyschoice to &quot;None&quot;)You go to the Convenience Store.
 
-(if: $storysection is 1)[[[Continue-&gt;Convenience Store(Section 1)]]]</tw-passagedata><tw-passagedata pid="24" name="Go to the Police Station." tags="" position="826,750">(if: $lilyschoice is &quot;Police Station&quot;)[(set: $insanity to $insanity+1)]
-(set: $lilyschoice to &quot;None&quot;)
-You go to the Police Station.
+(if: $storysection is 1)[[[Continue-&gt;Convenience Store(Section 1)]]]</tw-passagedata><tw-passagedata pid="24" name="Go to the Police Station." tags="" position="825,749">(if: $lilyschoice is &quot;Police Station&quot;)[(set: $insanity to $insanity+1)](set: $lilyschoice to &quot;None&quot;)You go to the Police Station.
 
-(if: $storysection is 1)[[[Continue-&gt;Police Station(Section 1)]]]</tw-passagedata><tw-passagedata pid="25" name="Go to the Pharmacy." tags="" position="975,751">(if: $lilyschoice is &quot;Pharmacy&quot;)[(set: $insanity to $insanity+1)]
-(set: $lilyschoice to &quot;None&quot;)
-You go to the Pharmacy.
+(if: $storysection is 1)[[[Continue-&gt;Police Station(Section 1)]]]</tw-passagedata><tw-passagedata pid="25" name="Go to the Town Hall." tags="" position="975,751">(if: $lilyschoice is &quot;Town Hall&quot;)[(set: $insanity to $insanity+1)](set: $lilyschoice to &quot;None&quot;)You go to the Town Hall.
 
-(if: $storysection is 1)[[[Continue-&gt;Pharmacy(Section 1)]]]</tw-passagedata><tw-passagedata pid="26" name="Convenience Store(Section 1)" tags="" position="675,899">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="27" name="Police Station(Section 1)" tags="" position="826,900">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="28" name="Pharmacy(Section 1)" tags="" position="975,901">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="29" name="Hospital(Section 1)" tags="" position="527,900">You just came from the Hospital.</tw-passagedata><tw-passagedata pid="30" name="&lt;-Refusal of the call here, more obvious and believable reasons?" tags="" position="1300,600"></tw-passagedata><tw-passagedata pid="31" name="This can also be crossing of the first threashold" tags="" position="1200,750"></tw-passagedata><tw-passagedata pid="32" name="Area(s) after will be the road of trials" tags="" position="1200,1200"></tw-passagedata><tw-passagedata pid="33" name="Belly of the Whale (Act 2)" tags="" position="1200,1050"></tw-passagedata><tw-passagedata pid="34" name="Meeting with the Goddess - find wife but can&#x27;t reach/save her?" tags="" position="1200,1350"></tw-passagedata><tw-passagedata pid="35" name="Supernatural Aid - daughter will lead you to items that could help? At the cost of sanity?" tags="" position="1200,600"></tw-passagedata><tw-passagedata pid="36" name="Temptation - Daughter shows signs of wanting to keep you here? Not sure" tags="" position="1200,1500"></tw-passagedata><tw-passagedata pid="37" name="Atonement - Daughter switches personalities (All hell breaks loose then?)" tags="" position="1200,1650"></tw-passagedata><tw-passagedata pid="38" name="Apotheosis - the hero is resolved and ready for the more difficult part of the adventure (not sure about this)" tags="" position="1200,1800"></tw-passagedata><tw-passagedata pid="39" name="Ultimate boon - Find out the true fate of your family" tags="" position="1200,1950"></tw-passagedata><tw-passagedata pid="40" name="refusal of return - Insane and stay in town with daughter" tags="" position="1200,2100"></tw-passagedata><tw-passagedata pid="41" name="Magic flight - escape from town, escape from hell (&amp; from daughter if best ending)" tags="" position="1200,2250"></tw-passagedata><tw-passagedata pid="42" name="Rescue from without - Find a car and keys" tags="" position="1200,2400"></tw-passagedata><tw-passagedata pid="43" name="Crossing return threshold - Reached safety in a vehicle" tags="" position="1200,2550"></tw-passagedata><tw-passagedata pid="44" name="If escaped from daughter, she will be missing from these sections" tags="" position="1300,2475"></tw-passagedata><tw-passagedata pid="45" name="Master of two worlds - If your daughter is still with you, you continue to accept these hallucinations" tags="" position="1200,2700"></tw-passagedata><tw-passagedata pid="46" name="Freedom to live - If you escape from your daughter, you live without hallucinations" tags="" position="1200,2850"></tw-passagedata><tw-passagedata pid="47" name="Bad Ending" tags="" position="1300,2100"></tw-passagedata><tw-passagedata pid="48" name="Good Ending" tags="" position="1300,2850"></tw-passagedata><tw-passagedata pid="49" name="Middle Ending" tags="" position="1300,2700"></tw-passagedata></tw-storydata>
+(if: $storysection is 1)[[[Continue-&gt;Town Hall(Section 1)]]]</tw-passagedata><tw-passagedata pid="26" name="Convenience Store(Section 1)" tags="" position="675,899">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="27" name="Police Station(Section 1)" tags="" position="826,900">You are in a small room containing a desk, an office chair and a wooden chair on opposite sides of it. There are a few cabinets behind the desk and a door in the back left part of the room.
+
+(if: $townhallkey is 0)[[[Look around.-&gt;Look around(Police Station)]]]
+[[Go through the door.]]
+[[Leave the Police Station.-&gt;Decide where to go.]]</tw-passagedata><tw-passagedata pid="28" name="Town Hall(Section 1)" tags="" position="975,901">You are in the lobby. There is a reception desk, some decorative plants and some comfy-looking chairs. From what you can see, there are no people here either.
+
+[[Look around.-&gt;Look around(Town Hall)]]
+[[Leave the Town Hall.-&gt;Decide where to go.]]</tw-passagedata><tw-passagedata pid="29" name="Hospital(Section 1)" tags="" position="527,900">You just came from the Hospital.</tw-passagedata><tw-passagedata pid="30" name="&lt;-Refusal of the call here, more obvious and believable reasons?" tags="" position="1301,600"></tw-passagedata><tw-passagedata pid="31" name="This can also be crossing of the first threashold" tags="" position="1200,750"></tw-passagedata><tw-passagedata pid="32" name="Area(s) after will be the road of trials" tags="" position="1200,1200"></tw-passagedata><tw-passagedata pid="33" name="Belly of the Whale (Act 2)" tags="" position="1200,1050"></tw-passagedata><tw-passagedata pid="34" name="Meeting with the Goddess - find wife but can&#x27;t reach/save her?" tags="" position="1200,1350"></tw-passagedata><tw-passagedata pid="35" name="Supernatural Aid - daughter will lead you to items that could help? At the cost of sanity?" tags="" position="1200,600"></tw-passagedata><tw-passagedata pid="36" name="Temptation - Daughter shows signs of wanting to keep you here? Not sure" tags="" position="1200,1500"></tw-passagedata><tw-passagedata pid="37" name="Atonement - Daughter switches personalities (All hell breaks loose then?)" tags="" position="1200,1650"></tw-passagedata><tw-passagedata pid="38" name="Apotheosis - the hero is resolved and ready for the more difficult part of the adventure (not sure about this)" tags="" position="1200,1800"></tw-passagedata><tw-passagedata pid="39" name="Ultimate boon - Find out the true fate of your family" tags="" position="1200,1950"></tw-passagedata><tw-passagedata pid="40" name="refusal of return - Insane and stay in town with daughter" tags="" position="1200,2100"></tw-passagedata><tw-passagedata pid="41" name="Magic flight - escape from town, escape from hell (&amp; from daughter if best ending)" tags="" position="1200,2250"></tw-passagedata><tw-passagedata pid="42" name="Rescue from without - Find a car and keys" tags="" position="1200,2400"></tw-passagedata><tw-passagedata pid="43" name="Crossing return threshold - Reached safety in a vehicle" tags="" position="1200,2550"></tw-passagedata><tw-passagedata pid="44" name="If escaped from daughter, she will be missing from these sections" tags="" position="1300,2475"></tw-passagedata><tw-passagedata pid="45" name="Master of two worlds - If your daughter is still with you, you continue to accept these hallucinations" tags="" position="1200,2700"></tw-passagedata><tw-passagedata pid="46" name="Freedom to live - If you escape from your daughter, you live without hallucinations" tags="" position="1200,2850"></tw-passagedata><tw-passagedata pid="47" name="Bad Ending" tags="" position="1300,2100"></tw-passagedata><tw-passagedata pid="48" name="Good Ending" tags="" position="1300,2850"></tw-passagedata><tw-passagedata pid="49" name="Middle Ending" tags="" position="1300,2700"></tw-passagedata><tw-passagedata pid="50" name="Look around(Town Hall)" tags="" position="975,1051">You find a large red button in a hidden compartment of the reception desk.
+
+[[Press the button.]]
+[[Don&#x27;t press the button.-&gt;Town Hall(Section 1)]]</tw-passagedata><tw-passagedata pid="51" name="Press the button." tags="" position="975,1201">You push the button, but it won&#x27;t move. You try again. Still nothing.
+Upon further inspection of the desk, you find a keyhole in another hidden compartment.
+(if: $townhallkey is 1)[
+You attempt to put the key you found in the police station into the keyhole. It fits! and *click!* it turns!
+You push the red button again and this time it works.
+]
+[[Done.-&gt;Town Hall(Section 1)]]</tw-passagedata><tw-passagedata pid="52" name="Look around(Police Station)" tags="" position="869,1051">You find a key hanging from a hook in a cabinet. There is a tag on the key, but it is worn. The only letters you can make out are &#x27;H&#x27; and &#x27;l&#x27; (&quot;#### H#l#&quot;).(set: $townhallkey to 1)(set: $random to (random: 1,10))
+
+(if: $random &gt; 7)[You also find a Crowbar in the cabinet.(set: $crowbar to 1)](else:)[You also find a Police Baton in the cabinet.(set: $baton to 1)]
+
+[[Done.-&gt;Police Station(Section 1)]]</tw-passagedata><tw-passagedata pid="53" name="Go through the door." tags="" position="763,1051">You try to open the door, but it seems to be locked. There is a small window on the door that you peek through. It&#x27;s dark inside, but you make it out to be a hallway connected to a few prison cells.
+
+[[Done.-&gt;Police Station(Section 1)]]</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
