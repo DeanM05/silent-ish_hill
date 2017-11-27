@@ -44,6 +44,7 @@ tw-sidebar tw-icon.undo
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">/*!
  *  howler.js v2.0.0
  *  howlerjs.com
@@ -2788,7 +2789,17 @@ tw-sidebar tw-icon.undo
 
 
 
-</script><tw-passagedata pid="1" name="Start" tags="Act-1" position="10,14">My name is Henry Lloyd, and I&#x27;m turning thirty today.
+
+</script><tw-passagedata pid="1" name="Start" tags="Act-1" position="0,0">{&lt;script&gt;
+audio.menuSong.fade(0.1, 0, 1000);
+audio.mainTheme = new Howl({
+	src: [&#x27;https://www.dropbox.com/s/jrdynjc0bjsfp4d/305-gothic-3.mp3?dl=1 &#x27;],
+	html5: true,
+    loop: true,
+	volume: 0.10,
+});
+audio.mainTheme.play();
+&lt;/script&gt;}My name is Henry Lloyd, and I&#x27;m turning thirty today.
 
 &lt;img src=&quot;https://media.pixcove.com/Q/8/1/Man-Gentleman-Face-People-White-Free-Image-Shadow--3707.jpg&quot;  alt=&quot;bed&quot;/&gt;
 
@@ -3042,9 +3053,11 @@ You decide to ignore the noise behind you and press forward; finding Lily is you
 
 *Now where did the sound of Lily come from?*
 
-{(if: $holdingLighter is 1)[ [[Take a passage to the right.-&gt;Winding passages.]] ]
-(if: $holdingLighter is 1)[ [[Take a passage sloping down to the left.-&gt;Winding passages.]] ]
-[[Continue forward.-&gt;Keep going.]]}</tw-passagedata><tw-passagedata pid="60" name="Investigate the noise" tags="" position="1875,2550">(set: $insanity to $insanity+1)You decide to turn around and follow the origin of that noise. (if: $holdingLighter is 1)[You hold your lighter a distance in front of your face and follow a brisk pace back the way you came.](elseif: $holdingLighter is 0)[You inch your way back the way you came, taking it step by step while keeping a firm stance; feeling your way along the walls.]
+(if: $holdingLighter is 1)[ [[Take a passage to the right.-&gt;Winding passages.]] 
+]\
+(if: $holdingLighter is 1)[ [[Take a passage sloping down to the left.-&gt;Winding passages.]] 
+]\
+[[Continue forward.-&gt;Keep going.]]</tw-passagedata><tw-passagedata pid="60" name="Investigate the noise" tags="" position="1875,2550">(set: $insanity to $insanity+1)You decide to turn around and follow the origin of that noise. (if: $holdingLighter is 1)[You hold your lighter a distance in front of your face and follow a brisk pace back the way you came.](elseif: $holdingLighter is 0)[You inch your way back the way you came, taking it step by step while keeping a firm stance; feeling your way along the walls.]
 
 [[Keep going.]]</tw-passagedata><tw-passagedata pid="61" name="Winding passages." tags="" position="1725,2700">After what seems like an eternity it&#x27;s beginning  to seem pointless. No matter how many turns or passages you take everything seems to stay the same. Never-ending darkness.(set: $insanity to $insanity+1)
 
@@ -3062,8 +3075,7 @@ It&#x27;s defintely Jean, but she&#x27;s speaking in a monotonous tone, as if to
 
 [[“Jean. It’s okay. I’m here.-&gt;Before you can respond.]]
 [[Reach out for her.-&gt;Before you can respond.]]</tw-passagedata><tw-passagedata pid="63" name="Before you can respond." tags="" position="1875,2850">{&lt;script&gt;
-var audio = {};
-
+audio.mainTheme.fade(0.1, 0, 1000);
 audio.jeansSong = new Howl({
 	src: [&#x27;https://drive.google.com/uc?export=download&amp;id=1j4Vy0f2EON1iKogolxL6JW08RNaq-npc&#x27;],
 	html5: true,
@@ -3071,8 +3083,7 @@ audio.jeansSong = new Howl({
 	volume: 0.05,
 });
 audio.jeansSong.play();
-&lt;/script&gt;}
-Before you get a chance to react, she disappears again, into the darkness. Just as you think that you she’s gone again, taken from you again-
+&lt;/script&gt;}Before you get a chance to react, she disappears again into the darkness. Just as you think that you she’s gone again, taken from you again-
 
 “Henry, find me...”
 
@@ -3196,7 +3207,7 @@ You belt out, almost in tears when suddenly, you’re thrown back out onto flat,
 
 [[Console Lily.-&gt;This isn&#x27;t right.]]]</tw-passagedata><tw-passagedata pid="77" name="Hold out your lighter" tags="" position="1975,3000">(If: $holdingLighter is 0)[You gingerly grab the lighter from your right pocket and hold it out in front of you, flicking it on. (Set: $holdingLighter to 1)]As you raise the lighter closer to each tunnel, you see it the flame begin to curve out towards the right passage.
 
-(If: $foundAnExit is 0)[*There must be a draft coming from there*(Set: $foundAnExit to 1)
+(If: $foundAnExit is 0)[*There must be a draft coming from there.*(Set: $foundAnExit to 1)
 
 ]\
 [[Take a passage rising to the right.-&gt;Irrational.]]
@@ -3252,18 +3263,27 @@ Before you can utter a word, you find yourself frozen.
 You take a step back from the ledge, and jump in.
 
 [[Falling...]]</tw-passagedata><tw-passagedata pid="85" name="Falling..." tags="" position="2100,3750">{&lt;script&gt;
-audio.jeansSong.volume(0.10);
+audio.jeansSong.fade(0.2, 0.1, 500);
 &lt;/script&gt;}[[Blackness...]]</tw-passagedata><tw-passagedata pid="86" name="Blackness..." tags="" position="2100,3900">{&lt;script&gt;
-audio.jeansSong.volume(0.05);
+audio.jeansSong.fade(0.1, 0.05, 250);
 &lt;/script&gt;}[[Nothing...]]</tw-passagedata><tw-passagedata pid="87" name="Grab your things from the desk beside you." tags="" position="450,175">You spot at the corner of your eye a table with a tray containing some of your belongings. You grab your lighter and wallet from it.(Set: $hasLighter to 1)
 
 [[Check around the corner.-&gt;Go after Jean.]]</tw-passagedata><tw-passagedata pid="88" name="Nothing..." tags="" position="2100,4050">{&lt;script&gt;
-audio.jeansSong.volume(0.01);
+audio.jeansSong.fade(0.05, 0.01, 250);
 &lt;/script&gt;}[[Wake up.-&gt;Back to normailty.]]</tw-passagedata><tw-passagedata pid="89" name="Back to normailty." tags="Temptation" position="1950,4050">{&lt;script&gt;
-audio.jeansSong.stop();
+audio.jeansSong.fade(0.01, 0, 250);
+audio.homeTheme = new Howl({
+	src: [&#x27;https://drive.google.com/uc?export=download&amp;id=1oyvuKtfx_o8q7PE9H5lWMNah9fmwwfOM&#x27;],
+	html5: true,
+    loop: true,
+	volume: 0.10,
+});
+audio.homeTheme.play();
 &lt;/script&gt;}You hear the sound of children playing, laughter in the distance. As you slowly open your eyes you feel groggy, and you ache as if waking from a month-long coma.(If: $examinedPain is 1)[ As you try to lift yourself a bit, your side begins to hurt.(if: $examinedPain is 2)[ You remember that you broke a rib about a week ago from the time you slipped from the roof trying to fix it yourself.]]
 
 “Ah, ouch ow...”
+
+&lt;img src=&quot;http://www.out-back-gardens.com/images/homepage-main-one.jpg&quot;/&gt;
 
 You’re lying in a lawn chair in your back garden, you must have fell asleep somehow. There’s a large group of people all standing around the patio, with children running through the garden. In your confusion, you hear a familiar voice coming from your left.
 
@@ -3293,8 +3313,7 @@ She gives you a kiss and shuffles off into the crowd.
 ]\
 
 
-&lt;img src=&quot;https://www.dropbox.com/s/2x9rnwxcy6yk190/birthday-parties-naperville.jpg?dl=1&quot;/&gt;
-[[Keep looking for Lily]]</tw-passagedata><tw-passagedata pid="91" name="Keep looking for Lily" tags="" position="1650,4050">You don’t see Lily playing with the kids in the garden.
+[[Keep looking for Lily.]]</tw-passagedata><tw-passagedata pid="91" name="Keep looking for Lily." tags="" position="1650,4050">You don’t see Lily playing with the kids in the garden.
 
 *They must be playing hide and seek.*
 
@@ -3311,7 +3330,10 @@ You look at your hands for a momemt. They&#x27;re smaller than you remember.]\
 
 [[He’s not real. The nightmare is over!]]
 {(If: $insanity &lt; 3)[ [[This isn’t right, this isn’t real.]] ]}
-{(If: $pistol is 1)[ [[Grab your gun.-&gt;This isn’t right, this isn’t real.]] ]}</tw-passagedata><tw-passagedata pid="92" name="He’s not real. The nightmare is over!" tags="Atonement-with-the-Father" position="1575,4200">(Set: $insanity to $insanity+1)Moments before the dark figure reaches you, Lily emerges from it, running into your arms. Your heart skips a beat.
+{(If: $pistol is 1)[ [[Grab your gun.-&gt;This isn’t right, this isn’t real.]] ]}</tw-passagedata><tw-passagedata pid="92" name="He’s not real. The nightmare is over!" tags="Atonement-with-the-Father" position="1575,4200">{&lt;script&gt;
+audio.homeTheme.fade(0.1, 0, 1000);
+audio.mainTheme.play();
+&lt;/script&gt;}(Set: $insanity to $insanity+1)Moments before the dark figure reaches you, Lily emerges from it, running into your arms. Your heart skips a beat.
 
 As you&#x27;re thrown back, everything is suddenly dark again. But you&#x27;re not unconscious, you realise your back in the caverns.
 
@@ -3325,7 +3347,10 @@ Tears of joy stream down your cheeks, you can’t believe you finally found her.
 
 “Daddy I&#x27;m so scared.”
 
-[[It’s okay, you’re safe now.-&gt;What are you talking about?]]</tw-passagedata><tw-passagedata pid="93" name="This isn’t right, this isn’t real." tags="Atonement-with-the-Father" position="1725,4200">Before you can react, you are engulfed in darkness. Everything is hazy, and you feel confused. You feel like you can’t move for a few moments. Slowly, your vision starts coming to you...
+[[It’s okay, you’re safe now.-&gt;What are you talking about?]]</tw-passagedata><tw-passagedata pid="93" name="This isn’t right, this isn’t real." tags="Atonement-with-the-Father" position="1725,4200">{&lt;script&gt;
+audio.homeTheme.fade(0.1, 0, 1000);
+audio.mainTheme.play();
+&lt;/script&gt;}Before you can react, you are engulfed in darkness. Everything is hazy, and you feel confused. You feel like you can’t move for a few moments. Slowly, your vision starts coming to you...
 
 You’re back in the caverns. Lily is standing right in front of you.
 
@@ -3393,7 +3418,7 @@ The planks explode outwards and you break through with relative ease.
 
 “I’m gonna feel that one later. Lily! Come on out, it’s safe!”
 
-As Lily steps out from the darkness, you take her hand once again.(If: $sanity &lt; 6)[ You recognise the town hall as it somehow seems undamaged after that avalanche. All the snow has been cleared away too.]
+As Lily steps out from the darkness, you take her hand once again.(If: $insanity &lt; 6)[ You recognise the town hall as it somehow seems undamaged after that avalanche. All the snow has been cleared away too.]
 
 [[Go outside.-&gt;Turning Point]]</tw-passagedata><tw-passagedata pid="101" name="refusal of return" tags="" position="200,2100">The town is much darker than when you first left the hospital. A chilling breeze hits you, and your eyes suddenly have trouble staying open. You look down and see Lily staring up at you, grinning.
 
@@ -3480,7 +3505,16 @@ As you walk in, you notice the cabinets behind the desk. Is that where the keys 
 
 [[Look at the cabinet.-&gt;Station Details]]
 [[Look at the desk.-&gt;Station Desk]]
-[[Look at the chair.-&gt;Station Chair]]</tw-passagedata><tw-passagedata pid="112" name="Turning Point" tags="" position="50,1875">After finally escaping the hellish labyrinth, you feel a sense of accomplishment despite your quest not being fully complete. What happens from here?
+[[Look at the chair.-&gt;Station Chair]]</tw-passagedata><tw-passagedata pid="112" name="Turning Point" tags="" position="50,1875">{&lt;script&gt;
+audio.mainTheme.fade(0.1, 0, 1000);
+audio.endingTheme = new Howl({
+	src: [&#x27;https://www.dropbox.com/s/s48qjqk9findskn/240-see-that-snake.mp3?dl=1&#x27;],
+	html5: true,
+    loop: true,
+	volume: 0.10,
+});
+audio.endingTheme.play();
+&lt;/script&gt;}After finally escaping the hellish labyrinth, you feel a sense of accomplishment despite your quest not being fully complete. What happens from here?
 
 &lt;img src=&quot;https://www.dropbox.com/s/14rr8i4v302km36/cave-desktop-hd-wallpaper-52603-54320-hd-wallpapers.jpg?dl=1&quot;/&gt;
 
@@ -3542,8 +3576,19 @@ Let&#x27;s leave this town for good. Time to find a car and escape. You recall s
 
 You start the ignition and place your foot on the clutch, ready to embark on a journey out of this nightmare.
 
-[[Push the accelerator.-&gt;Unbounded]]</tw-passagedata><tw-passagedata pid="122" name="Main Menu" tags="Main-Menu" position="6,156">&lt;img src=&quot;https://www.dropbox.com/s/p5h2e2xaa83t2nu/49672.jpg?dl=1&quot;/&gt;
+[[Push the accelerator.-&gt;Unbounded]]</tw-passagedata><tw-passagedata pid="122" name="Main Menu" tags="Main-Menu" position="0,150">{&lt;script&gt;
+var audio = {};
 
+audio.menuSong = new Howl({
+	src: [&#x27;https://www.dropbox.com/s/r5nv1fpoa4hbd7l/204-flight.mp3?dl=1 &#x27;],
+	html5: true,
+    loop: true,
+	volume: 0.10,
+});
+audio.menuSong.play();
+&lt;/script&gt;}&lt;img src=&quot;https://www.dropbox.com/s/p5h2e2xaa83t2nu/49672.jpg?dl=1&quot;/&gt;
+
+By
 Dean Maloney
 Philip Waldron
 Andrew Whelan
